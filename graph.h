@@ -7,13 +7,16 @@ class graph
 private:
     vector<gnode*> nodes;
 
+
+
+public:
+    graph();
     void addNode(gnode* n);
     gnode* getById(int id);
     bool addTo(int id, gnode* toadd);
     int getHighestId();
-
-public:
-    graph();
+    bool gnodeExists(int sid);
+    bool gnodeExists(gnode* gn);
 };
 
 

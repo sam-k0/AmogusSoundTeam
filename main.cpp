@@ -1,12 +1,27 @@
 #include <iostream>
 #include "list.h"
+#include "graph.h"
 using namespace std;
 
 
 
 
-
 int main()
+{
+    graph* g = new graph();
+
+    gnode* n = new gnode(5,-1);
+
+    g->addTo(-1, n);
+
+    cout << g->gnodeExists(n)<<endl;
+
+    cout << "amogus" << endl;
+    return 0;
+}
+
+
+int oldmain()
 {
 
     list* l =  new list();
@@ -44,7 +59,6 @@ int main()
 
 
     cout << "amogus"<<endl;
-
-
+    return 0;
 }
 

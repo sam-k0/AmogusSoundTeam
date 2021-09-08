@@ -23,9 +23,9 @@ gnode *graph::getById(int id)
     return nullptr;
 }
 
-bool graph::addTo(int id, gnode *toadd) // pass ID = -1 for initial node
+bool graph::addTo(int id, gnode *toadd)
 {
-    if(id == -1 && nodes.empty()) // add a initial first node
+    if( nodes.empty()) // add a initial first node
     {
         nodes.push_back(toadd);
         toadd->setId(getHighestId()+1);
@@ -68,3 +68,31 @@ int graph::getHighestId() // gets the highest id in the graph
     }
     return highest;
 }
+
+bool graph::gnodeExists(int sid)
+{
+    int res = -1;
+    for(gnode* element : nodes)
+    {
+        res = element->getId();
+        if(res == sid)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool graph::gnodeExists(gnode* gn)
+{
+
+    for(gnode* element : nodes)
+    {
+        if(element == gn)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
