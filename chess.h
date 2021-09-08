@@ -25,6 +25,7 @@ public:
     void remove(Coord coords);
     void damedaneDameyoDameDamoyo(int maxnum);
     Coord nextPos(Coord coords);
+    void print();
 };
 
 #endif // CHESS_H

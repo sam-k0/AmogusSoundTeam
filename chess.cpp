@@ -1,4 +1,5 @@
 #include "chess.h"
+#include <string>
 using namespace std;
 
 chess::chess()
@@ -91,7 +92,7 @@ void chess::damedaneDameyoDameDamoyo(int maxnum)
     TryNextSteps(0, maxnum);
 }
 
-chess::Coord chess::nextPos(chess::Coord coords)
+chess::Coord chess::nextPos(chess::Coord coords) // Gets the next pos to try.
 {
     if(coords.x < dim)
     {
@@ -109,6 +110,20 @@ chess::Coord chess::nextPos(chess::Coord coords)
         Coord ret = {-1,-1}; // all are full
         cout << "All coords are checked or full."<<endl;
         return ret;
+    }
+}
+
+void chess::print() // print board
+{
+    string out = "";
+    for(int y = 0; y<dim-1; y++)
+    {
+        out = "";
+        for(int x = 0; x<dim-1; x++)
+        {
+            out += std::to_string(board[x][y]);
+        }
+        cout << out <<endl;
     }
 }
 

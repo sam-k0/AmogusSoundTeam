@@ -1,12 +1,20 @@
 #include <iostream>
 #include "list.h"
 #include "graph.h"
+#include "chess.h"
 using namespace std;
 
 
-
-
 int main()
+{
+    chess c = chess();
+    c.print();
+    c.damedaneDameyoDameDamoyo(3);
+    c.print();
+    cout<<"amogus"<<endl;
+}
+
+int graphmain()
 {
     graph* g = new graph();
 
