@@ -4,12 +4,12 @@
 #include "chess.h"
 using namespace std;
 
-
+// This is available in all editors.
 int main()
 {
     chess c = chess();
     c.print();
-    c.damedaneDameyoDameDamoyo(3);
+    c.damedaneDameyoDameDamoyo(4);
     c.print();
     cout<<"amogus"<<endl;
 }

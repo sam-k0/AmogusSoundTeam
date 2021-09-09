@@ -7,8 +7,6 @@ class graph
 private:
     vector<gnode*> nodes;
 
-
-
 public:
     graph();
     void addNode(gnode* n);

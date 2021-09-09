@@ -21,9 +21,8 @@ void chess::init()
 
 bool chess::TryNextSteps(int i, int max)
 {
-    Coord coords = {0,0};
+    Coord coords = {1,0};
     bool success = false;
-
 
     do
     {
