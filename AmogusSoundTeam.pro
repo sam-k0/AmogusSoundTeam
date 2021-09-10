@@ -9,11 +9,15 @@ SOURCES += \
         graph.cpp \
         list.cpp \
         main.cpp \
-        node.cpp
+        node.cpp \
+        tnode.cpp \
+        tree.cpp
 
 HEADERS += \
     chess.h \
     gnode.h \
     graph.h \
     list.h \
-    node.h
+    node.h \
+    tnode.h \
+    tree.h

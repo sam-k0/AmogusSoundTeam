@@ -2,9 +2,55 @@
 #include "list.h"
 #include "graph.h"
 #include "chess.h"
+#include "tree.h"
 using namespace std;
 
 // This is available in all editors.
+int main()
+{
+    tree<int>* t = new tree<int>();
+
+
+    tnode<int>* n = new tnode<int>(2);
+    t->add(n);
+
+    n = new tnode<int>(4);
+    t->add(n);
+
+    n = new tnode<int>(5);
+    t->add(n);
+
+    n = new tnode<int>(6);
+    t->add(n);
+
+    n = new tnode<int>(7);
+    t->add(n);
+
+    n = new tnode<int>(8);
+    t->add(n);
+
+    n = new tnode<int>(9);
+    t->add(n);
+
+    n = new tnode<int>(10);
+    t->add(n);
+
+    n = new tnode<int>(11);
+    t->add(n);
+
+    n = new tnode<int>(12);
+    t->add(n);
+
+
+
+
+    t->printtree();
+
+
+    cout << "Amogus"<<endl;
+    return 0;
+}
+
 int chessmain()
 {
     chess c = chess();
@@ -15,7 +61,7 @@ int chessmain()
     return 0;
 }
 
-int main()
+int graphmain()
 {
     graph* g = new graph();
 
@@ -38,7 +84,6 @@ int main()
     cout << "amogus" << endl;
     return 0;
 }
-
 
 int oldmain()
 {
