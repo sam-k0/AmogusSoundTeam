@@ -18,7 +18,7 @@ public:
     bool gnodeExists(gnode* gn);
     void adjazenzmatrix();
     void dijkstra(int start, int dest);
-    bool vectorContains(vector<gnode*> *vec, gnode* n);
+    bool vectorContains(vector<gnode*> vec, gnode* n);
 };
 
 
