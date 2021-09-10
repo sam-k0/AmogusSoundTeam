@@ -8,11 +8,12 @@ class gnode
 private:
     int weight = 0;
     std::vector<gnode*> connections;
-    int id;
+    int id = -1;
 
 
 public:
     gnode();
+    gnode(int weight);
     gnode(int weight, int id);
 
     // Main

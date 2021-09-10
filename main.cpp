@@ -5,24 +5,35 @@
 using namespace std;
 
 // This is available in all editors.
-int main()
+int chessmain()
 {
     chess c = chess();
     c.print();
     c.damedaneDameyoDameDamoyo(4);
     c.print();
     cout<<"amogus"<<endl;
+    return 0;
 }
 
-int graphmain()
+int main()
 {
     graph* g = new graph();
 
-    gnode* n = new gnode(5,-1);
+    gnode* n = new gnode(5);
 
     g->addTo(-1, n);
 
-    cout << g->gnodeExists(n)<<endl;
+    gnode* m = new gnode(3);
+
+    g->addTo(0, m);
+
+    gnode* f = new gnode(4);
+
+    g->addTo(0, f);
+
+    g->simpleConnect(2,1);
+
+    g->adjazenzmatrix();
 
     cout << "amogus" << endl;
     return 0;
