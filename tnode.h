@@ -2,6 +2,8 @@
 #define TNODE_H
 #include <string>
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 template<typename T>
 class tnode
@@ -15,6 +17,11 @@ public:
     tnode(T val)
     {
         data = val;
+    }
+
+    T getData()
+    {
+        return data;
     }
 
     bool hasLeft()
@@ -101,7 +108,61 @@ public:
 
     }
 
+    vector<tnode<T>*> addVec()
+    {
+        vector<tnode<T>*> vec;
+        vector<tnode<T>*> rightvec;
+        if(!left && !right)
+        {
+            vec.push_back(this);
+            return vec;
+        }
+        if(left)
+        {
+            vec = left->addVec();
+        }
+        if(right)
+        {
+            rightvec = right->addVec();
+        }
+        rightvec.push_back(this);
+        // merge
+        vec.insert(vec.end(), rightvec.begin(), rightvec.end());
+        return vec;
+
+
+    }
 };
+
+template<typename T>
+bool operator>=(tnode<T> a, tnode<T> b)
+{
+    return a.getData()>=b.getData();
+}
+
+template<typename T>
+bool operator==(tnode<T> a, tnode<T> b)
+{
+    return a.getData()==b.getData();
+}
+
+template<typename T>
+bool operator<=(tnode<T> a, tnode<T> b)
+{
+    return a.getData()<=b.getData();
+}
+
+template<typename T>
+bool operator>(tnode<T> a, tnode<T> b)
+{
+    return a.getData()>b.getData();
+}
+
+template<typename T>
+bool operator<(tnode<T> a, tnode<T> b)
+{
+    return a.getData()<b.getData();
+}
 
 #endif // TNODE_H
 

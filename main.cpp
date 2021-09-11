@@ -3,13 +3,28 @@
 #include "graph.h"
 #include "chess.h"
 #include "tree.h"
+#include "heap.h"
 using namespace std;
 
 // This is available in all editors.
+
 int main()
 {
-    tree<int>* t = new tree<int>();
+    int arr[] = {1,4,5,2};
+    int arraySize = sizeof(arr)/sizeof(arr[0]);
+    heap<int>* h = new heap<int>(arr, arraySize);
 
+    h->addheap(44);
+
+    h->printtree();
+    return 0;
+}
+
+
+
+int treemain()
+{
+    tree<int>* t = new tree<int>();
 
     tnode<int>* n = new tnode<int>(2);
     t->add(n);
@@ -40,9 +55,6 @@ int main()
 
     n = new tnode<int>(12);
     t->add(n);
-
-
-
 
     t->printtree();
 

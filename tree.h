@@ -86,6 +86,11 @@ public:
         return root;
     }
 
+    void resetRoot()
+    {
+        root = nullptr;
+    }
+
     void printtree()
     {
         if(!root)
